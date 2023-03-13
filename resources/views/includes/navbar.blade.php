@@ -2,7 +2,7 @@
         <div class="container">
             <div class="nav row navbar navbar-expand-lg navbar-light bg-white">
                 <a href="#" class="navbar-brand">
-                    <img src="/frontend/images/logo.png" alt="logo nomads">
+                    <img src="{{url('frontend/images/logo.png')}}" alt="logo nomads">
                 </a>
                 <!-- toggle mobile -->
                 <button class="navbar-toggler navbar-toggler-right"
