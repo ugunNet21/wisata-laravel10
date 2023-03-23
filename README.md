@@ -3,5 +3,5 @@
 
 <ul>Front End</ul>
 <br>
-<img src="https://github.com/ugunNet21/wisata-laravel10/blob/master/public/ss/popular.png" width="800" height="600"/>
+<img src="https://github.com/ugunNet21/wisata-laravel10/blob/master/public/ss/popular.png" width="800" height="400"/>
 
