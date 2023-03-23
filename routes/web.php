@@ -1,11 +1,14 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\Admin\TravelPackageController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Auth\Events\Verified;
+use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,19 +22,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/details', [DetailController::class, 'index'])->name('detail');
-Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
-Route::get('/checkout/success', [CheckoutController::class, 'success'])->name('checkout-success');
+Route::get('/', [HomeController::class, 'index'])
+    ->name('home');
+Route::get('/detail/{slug}', [DetailController::class, 'index'])
+    ->name('detail');
+Route::get('/checkout/{id}', [CheckoutController::class, 'index'])
+    ->name('checkout_process')
+    ->Middleware(['auth','verified']);
+Route::get('/checkout/success', [CheckoutController::class, 'success'])
+    ->name('checkout-success');
 
 // Backend
 Route::group(['prefix' => '/admin', 'middleware' => ['auth', 'admin']], function () {
-    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/', [DashboardController::class, 'index'])
+        ->name('dashboard');
     Route::resource('/travel-package', TravelPackageController::class);
-
-
+    Route::resource('/gallery', GalleryController::class);
+    Route::resource('/transaction', TransactionController::class);
 });
 
-Auth::routes(['verify'=>true]);
+Auth::routes(['verify' => true]);
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
