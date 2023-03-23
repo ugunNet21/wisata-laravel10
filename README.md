@@ -1,5 +1,5 @@
 # Website Traveling
-<p>Webiste ini adalah dari course <a href="https://buildwithangga.com/kelas/full-stack-developer-with-laravel-web-travel" target="_blank" >Build With Angga</a> </p>
+<p>Webiste ini adalah dari course <a href="https://buildwithangga.com/kelas/full-stack-developer-with-laravel-web-travel" target="_blank" >Build With Angga</a> yang sebelumnya masih menggunakan laravel 6, namun untuk yang ada di halaman ini telah diupgrade ke versi 10.1</p>
 
 <ul>Front End</ul>
 <br>
