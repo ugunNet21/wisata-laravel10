@@ -38,13 +38,17 @@ Memulai
 cp .env.example .env
 
 - Perintah Membuat key
+<br>
 php artisan key:generate
 - Printah Migrate Ke database
+<br>
 php artisan migrate
 - Perintah Memasukan database Seeder
+<br>
 php artisan db:seed
 
 - Perintah Menjalankan Server
+<br>
 php artisan serve
-
+<br>
 - Membuka aplikasi di browser dengan -> localhost:8000
