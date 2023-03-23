@@ -16,6 +16,5 @@
 <br>
 <p> Cara Install laravel Versi 10 <a href="https://laravel.com/docs/10.x" target="_blank" /> Dokumentasi Laravel </p>
 <br>
-<p> Dengan Composer </p>
-<br>
+<p> 1. Dengan Composer </p>
 <p>composer create-project laravel/laravel example-app </p>
