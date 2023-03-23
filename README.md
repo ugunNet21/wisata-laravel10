@@ -18,3 +18,23 @@
 <br>
 <p> 1. Dengan Composer </p>
 <p>composer create-project laravel/laravel example-app </p>
+<p> 2. Composer Global</p>
+<p>laravel new example-app</p>
+
+<p>Langkah Menggunakan aplikasi ini </p>
+- Clonning / download 
+- Buat Folder pada partisi Komputer . Misal di partisi Local Disk D
+
+Memulai
+<p> 1. Dengan Composer </p>
+<p>composer create-project laravel/laravel example-app </p>
+<p> 2. Composer Global</p>
+<p>laravel new example-app</p>
+
+- Buat database denngan mysql atau adminer
+- cp .env.example .env
+- php artisan key:generate
+- php artisan migrate
+- php artisan db:seed
+- php artisan serve
+- local:8000
