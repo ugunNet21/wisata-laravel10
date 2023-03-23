@@ -31,10 +31,10 @@ Memulai
 <p> 2. Composer Global</p>
 <p>laravel new example-app</p>
 
-- Buat database denngan mysql atau adminer
+<p> Buat database denngan mysql atau <a href="" />Adminer</p>
 - cp .env.example .env
 - php artisan key:generate
 - php artisan migrate
 - php artisan db:seed
 - php artisan serve
-- local:8000
+- jalankan aplikasi di browser dengan -> localhost:8000
