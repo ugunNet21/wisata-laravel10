@@ -15,20 +15,24 @@ class CheckoutController extends Controller
     public function index(Request $request, $id)
     {
         $item = Transaction::with(['details', 'travel_package', 'user'])->findOrFail($id);
+
         return view('pages.checkout', [
-            'jumlah_user' => Transaction::where('total_users')->count()
+            'item' => $item
         ]);
     }
+
     public function process(Request $request, $id)
     {
         $travel_package = TravelPackage::findOrFail($id);
+
         $transaction = Transaction::create([
-            'travel_package_id' => $id,
+            'travel_packages_id' => $id,
             'users_id' => Auth::user()->id,
             'additional_visa' => 0,
             'transaction_total' => $travel_package->price,
             'transaction_status' => 'IN_CART'
         ]);
+
         TransactionDetail::create([
             'transactions_id' => $transaction->id,
             'username' => Auth::user()->username,
@@ -36,7 +40,8 @@ class CheckoutController extends Controller
             'is_visa' => false,
             'doe_passport' => Carbon::now()->addYears(5)
         ]);
-        return redirect()->route('checkout', $transaction->$id);
+
+        return redirect()->route('checkout', $transaction->id);
     }
 
     public function remove(Request $request, $detail_id)

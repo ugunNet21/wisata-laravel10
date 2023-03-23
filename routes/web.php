@@ -10,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,13 +25,29 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
+
 Route::get('/detail/{slug}', [DetailController::class, 'index'])
     ->name('detail');
-Route::get('/checkout/{id}', [CheckoutController::class, 'index'])
+
+Route::post('/checkout/{id}', [CheckoutController::class, 'process'])
     ->name('checkout_process')
-    ->Middleware(['auth','verified']);
-Route::get('/checkout/success', [CheckoutController::class, 'success'])
-    ->name('checkout-success');
+    ->Middleware(['auth', 'verified']);
+
+Route::get('/checkout/{id}', [CheckoutController::class, 'index'])
+    ->name('checkout')
+    ->Middleware(['auth', 'verified']);
+
+Route::post('/checkout/create/{detail_id}', [CheckoutController::class, 'create'])
+    ->name('checkout-create')
+    ->Middleware(['auth', 'verified']);
+
+Route::get('/checkout/create/{detail_id}', [CheckoutController::class, 'remove'])
+    ->name('checkout-remove')
+    ->Middleware(['auth', 'verified']);
+
+Route::get('/checkout/confirm/{id}', [CheckoutController::class, 'success'])
+    ->name('checkout-success')
+    ->Middleware(['auth', 'verified']);
 
 // Backend
 Route::group(['prefix' => '/admin', 'middleware' => ['auth', 'admin']], function () {

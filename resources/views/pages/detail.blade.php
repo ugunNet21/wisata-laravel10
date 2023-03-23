@@ -30,7 +30,8 @@
                                     {{-- zoom --}}
                                     <div class="xzoom-container">
                                         <img src="{{ Storage::url($item->galleries->first()->image) }}" class="xzoom"
-                                            id="xzoom-default" xoriginal="{{ Storage::url($item->galleries->first()->image) }}">
+                                            id="xzoom-default"
+                                            xoriginal="{{ Storage::url($item->galleries->first()->image) }}">
                                     </div>
                                     {{-- thumbs --}}
                                     @foreach ($item->galleries as $gallery)
@@ -45,7 +46,7 @@
                                 </div>
                             @endif
                             <h2>Tentang Wisata</h2>
-                            {{$item->about}}
+                            {{ $item->about }}
                             <div class="features row">
                                 <div class="col-md-4">
                                     <img src="{{ url('frontend/images/ic_event.png') }}" alt="" srcset=""
@@ -119,7 +120,8 @@
                         </div>
                         <div class="join-container">
                             @auth
-                                <form action="{{route('checkout_process', $item->id)}}" method="POST">
+                                <form action="{{ route('checkout_process', $item->id) }}" method="post">
+                                    @csrf
                                     <button class="btn btn-block btn-join-now mt-3 py-2" type="submit">
                                         Join Now
                                     </button>
