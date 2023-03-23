@@ -31,10 +31,20 @@ Memulai
 <p> 2. Composer Global</p>
 <p>laravel new example-app</p>
 
-<p> Buat database denngan mysql atau <a href="" />Adminer</p>
-- cp .env.example .env
-- php artisan key:generate
-- php artisan migrate
-- php artisan db:seed
-- php artisan serve
-- jalankan aplikasi di browser dengan -> localhost:8000
+<p> Buat database denngan mysql atau <a href="https://github.com/ugunNet21/wisata-laravel10/tree/master/adminer" target="_blank" />Adminer</p>
+<br>
+
+- Perintah Copy env 
+cp .env.example .env
+
+- Perintah Membuat key
+php artisan key:generate
+- Printah Migrate Ke database
+php artisan migrate
+- Perintah Memasukan database Seeder
+php artisan db:seed
+
+- Perintah Menjalankan Server
+php artisan serve
+
+- Membuka aplikasi di browser dengan -> localhost:8000
