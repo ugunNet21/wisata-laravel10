@@ -7,7 +7,7 @@
 <br>
 <img src="https://github.com/ugunNet21/wisata-laravel10/blob/master/public/ss/checkout.png" width="1000" height="500"/>
 <p>Back End Admn</p>
-<img src="https://github.com/ugunNet21/wisata-laravel10/blob/master/public/ss/dashbiar%20admin.png" width="800" height="500"/>
-<img src="https://github.com/ugunNet21/wisata-laravel10/blob/master/public/ss/gallery%20admin.png" width="800" height="500"/>
-<img src="https://github.com/ugunNet21/wisata-laravel10/blob/master/public/ss/transaksi%20admin.png" width="800" height="500"/>
+<img src="https://github.com/ugunNet21/wisata-laravel10/blob/master/public/ss/dashbiar%20admin.png" width="1000" height="300"/>
+<img src="https://github.com/ugunNet21/wisata-laravel10/blob/master/public/ss/gallery%20admin.png" width="1000" height="300"/>
+<img src="https://github.com/ugunNet21/wisata-laravel10/blob/master/public/ss/transaksi%20admin.png" width="1000" height="300"/>
 
