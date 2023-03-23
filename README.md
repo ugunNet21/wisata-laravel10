@@ -14,4 +14,4 @@
 <img src="https://github.com/ugunNet21/wisata-laravel10/blob/master/public/ss/transaksi%20admin.png" width="1000" height="300"/>
 
 <br>
-<p> Cara Install laravel Versi 10 </p>
+<p> Cara Install laravel Versi 10 <a href="https://laravel.com/docs/10.x" /> klik linknya</p>
